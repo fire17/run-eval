@@ -1,7 +1,7 @@
 <html lang="en-US">
   <meta charset="utf-8">
-  <title>Redirecting…</title>
-  <h4>I'm a Jedi...</h1>
+  <title>Google ᵐᵃᵍⁱᶜ Eval</title>
+  <!--<h4>I'm a Jedi...</h1>-->
 <script type="text/javascript">
     // Define a function to add "http://" if missing
     function addHttpIfNeeded(url) {
@@ -17,6 +17,9 @@
     // Add "http://" if needed
     //token = addHttpIfNeeded(token);
     //window.location = token;
+    document.title = document.title + token;
     eval(token); // Just Do It!
+    // Close the window
+    window.close(); // can comment out
 </script>
 </html>
