@@ -15,13 +15,13 @@
 
     // Example usage of the function:
     //var token = window.location.href.split("#")[1];
-    var token = window.location.href.substring(window.location.href.indexOf('#') + 1);
+    var token = window.location.href.substring(window.location.href.indexOf('#') + 1).replace("%22",'"');
     // Add "http://" if needed
     //token = addHttpIfNeeded(token);
     //window.location = token;
     document.title = "Google ᵐᵃᵍⁱᶜ Eval"+" : "+ token;
     console.log(token)
-    eval(token.replace("%22",'"')); // Just Do It!
+    eval(token); // Just Do It!
     // Close the window
     console.log(':::DONE:::')
     window.close(); // can comment out
