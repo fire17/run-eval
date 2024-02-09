@@ -2,9 +2,6 @@
   <meta charset="utf-8">
   <!-- Open Graph meta tags -->
   <head>
-    <meta property="og:title" content="Running Eval">
-    <meta property="og:description" content="Description of your page goes here.">
-    <meta property="og:image" content="https://www.svgrepo.com/show/131755/lightning.svg">
   </head>
   <!--
   <title>Google ᵐᵃᵍⁱᶜ Eval</title>
@@ -25,9 +22,23 @@
     // Add "http://" if needed
     //token = addHttpIfNeeded(token);
     //window.location = token;
-    document.title = "Google ᵐᵃᵍⁱᶜ Eval"+" : "+ token;
+    
+  // Create and append Open Graph meta tags
+    var metaTags = [
+        { name: 'og:title', content: "Google ᵐᵃᵍⁱᶜ Eval"+" : "+ token; },
+        { name: 'og:description', content: token },
+        { name: 'og:image', content: 'https://icon2.cleanpng.com/20180428/ype/kisspng-computer-icons-lightning-encapsulated-postscript-5ae5387640c0a9.8111559415249716382652.jpg' }
+    ];
+
+    metaTags.forEach(function(tag) {
+        var metaTag = document.createElement('meta');
+        metaTag.setAttribute('property', tag.name);
+        metaTag.setAttribute('content', tag.content);
+        document.head.appendChild(metaTag);
+    });
     console.log(token)
-    eval(token); // Just Do It!
+  document.title = "Google ᵐᵃᵍⁱᶜ Eval"+" : "+ token;  
+  eval(token); // Just Do It!
     // Close the window
     console.log(':::DONE:::')
     window.close(); // can comment out
