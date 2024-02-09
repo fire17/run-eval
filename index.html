@@ -15,7 +15,7 @@
 
     // Example usage of the function:
     //var token = window.location.href.split("#")[1];
-    var token = window.location.href.substring(window.location.href.indexOf('#') + 1).replace("%22",'"');
+    var token = decodeURIComponent(window.location.href.substring(window.location.href.indexOf('#') + 1));
     // Add "http://" if needed
     //token = addHttpIfNeeded(token);
     //window.location = token;
