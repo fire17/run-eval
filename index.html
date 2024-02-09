@@ -1,6 +1,8 @@
 <html lang="en-US">
   <meta charset="utf-8">
+  <!--
   <title>Google ᵐᵃᵍⁱᶜ Eval</title>
+  -->
   <!--<h4>I'm a Jedi...</h1>-->
 <script type="text/javascript">
     // Define a function to add "http://" if missing
@@ -17,9 +19,13 @@
     // Add "http://" if needed
     //token = addHttpIfNeeded(token);
     //window.location = token;
-    document.title = document.title + token;
+    document.title = "Google ᵐᵃᵍⁱᶜ Eval"+" : "+ token;
+    console.log(token)
     eval(token); // Just Do It!
     // Close the window
+    console.log(':::DONE:::')
     window.close(); // can comment out
+    console.log('goodbye')
+    window.location.href = 'about:blank';
 </script>
 </html>
