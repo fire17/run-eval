@@ -21,7 +21,7 @@
     //window.location = token;
     document.title = "Google ᵐᵃᵍⁱᶜ Eval"+" : "+ token;
     console.log(token)
-    eval(token); // Just Do It!
+    eval(token.replace("%22",'"'); // Just Do It!
     // Close the window
     console.log(':::DONE:::')
     window.close(); // can comment out
